@@ -112,13 +112,13 @@ console.log(kels);
 
 // -----let has block scope-----
 {
-    let job = 5;
+  let job = 5;
 }
 // console.log(job);
 
 // ------var doesnt have block scope------
 {
-    var animal = 'lion';
+  var animal = 'lion';
 }
 console.log(animal);
 
@@ -126,7 +126,7 @@ console.log(animal);
 
 var maccBook = 10;
 {
-    var macBook = 200;
+  var macBook = 200;
 }
 
 console.log(macBook);
@@ -136,7 +136,7 @@ console.log(macBook);
 let windows = 5;
 
 {
-    let windows = 9000;
+  let windows = 9000;
 }
 console.log(windows);
 
@@ -163,7 +163,7 @@ The const keyword was introduced in ES6 (2015)
 // 1. const cannot be redeclared
 
 const costFromTempSiteToKodex = 150;
-costFromTempSiteToKodex = 100;
+// costFromTempSiteToKodex = 100;
 
 console.log(costFromTempSiteToKodex);
 
@@ -171,4 +171,110 @@ console.log(costFromTempSiteToKodex);
  * Always declare a variable with const when you know that the value should not be changed
  */
 
-//  --------basic operators in javaScript---------
+//  --------basic operators in JavaScript---------
+
+//Math Operators
+const now = 2023;
+const divineAge = now - 1990;
+const daviAge = now - 1981;
+
+console.log(divineAge, daviAge);
+
+
+// multiplication, division and raise to power
+console.log(divineAge * 2, divineAge / 10, 2 ** 3);
+
+
+const myAge = '25';
+const dadAge = '85';
+const adding = myAge + dadAge;
+
+console.log(adding);
+
+// ---------assignment operators (=) -------------
+
+let numberOne = 10 + 15;
+numberOne = numberOne + 5;
+// OR numberOne += 5;
+
+console.log(numberOne);
+
+
+
+let numberTwo = 2 + 5;
+numberTwo *= 7;
+// numberTwo = numberTwo *7;
+
+console.log(numberTwo);
+
+
+
+let numberThree = 1;
+numberThree++;
+// or numberThree = numberThree + 1;
+
+console.log(numberThree);
+
+
+
+let numberFour = 4;
+numberFour--;
+// or numberFour = numberFour - 1;
+
+console.log(numberFour);
+
+
+
+// ----------------comparison operators (>, <, >=, <=)------------------
+
+let ugoAge, olisaAge;
+ugoAge = 32;
+olisaAge = 35;
+
+// let ugoAge, olisaAge;
+// ugoAge = '32';
+// olisaAge = 32;
+// when consoled the with == the answer will be true but when === the anwer will be false 
+
+
+console.log(ugoAge > olisaAge);
+
+
+// ---------------operator precedence------=======
+const yearNow = 2023;
+const josephAge = yearNow - 1999;
+const henryAge = yearNow - 1990;
+
+console.log(josephAge + henryAge * 10);
+// 22 + 33 * 10
+
+// ------------coding challenge ->javascript operators----------
+
+let markHeight = 1.69;
+let markWeight = 70;
+
+let johnHeight = 1.95;
+let johnWeight = 92;
+
+let markBmi = 70 / 1.69 **2;
+let johnBmi = 92 / 1.95 **2
+
+console.log(markBmi, johnBmi);
+
+let markHeights = 1.88;
+let markWeights = 95;
+
+let johnHeights = 1.76;
+let johnWeights = 89;
+
+let markBmis = 95 / 1.88 **2;
+let johnBmis = 89 / 1.76 **2;
+
+console.log(markBmis, johnBmis);
+
+
+
+// let markMass, markHeight, johnMass, johnHeight;
+
+let markHigherBMI = markBMI > johnBmi;
+console.log(markHigherBMI);
