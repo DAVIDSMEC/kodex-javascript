@@ -256,8 +256,8 @@ let markWeight = 70;
 let johnHeight = 1.95;
 let johnWeight = 92;
 
-let markBmi = 70 / 1.69 **2;
-let johnBmi = 92 / 1.95 **2
+let markBmi = 70 / 1.69 ** 2;
+let johnBmi = 92 / 1.95 ** 2
 
 console.log(markBmi, johnBmi);
 
@@ -267,8 +267,8 @@ let markWeights = 95;
 let johnHeights = 1.76;
 let johnWeights = 89;
 
-let markBmis = 95 / 1.88 **2;
-let johnBmis = 89 / 1.76 **2;
+let markBmis = 95 / 1.88 ** 2;
+let johnBmis = 89 / 1.76 ** 2;
 
 console.log(markBmis, johnBmis);
 
@@ -276,5 +276,69 @@ console.log(markBmis, johnBmis);
 
 // let markMass, markHeight, johnMass, johnHeight;
 
-let markHigherBMI = markBMI > johnBmi;
+let markHigherBMI = markBmi > johnBmi;
 console.log(markHigherBMI);
+
+// ---------strings and template literals-------------
+const myName = 'Donald';
+const myJob = 'Developer';
+const yearOfBirth = 1717;
+const currentYear = 2077;
+
+const donald = "I'm " + myName + ', a ' + (currentYear - yearOfBirth) + ' year old' + myJob + '!';
+console.log(donald);
+
+const newDonald = `I'm ${myName}, a ${currentYear - yearOfBirth} year old ${myJob}!`;
+console.log(newDonald);
+
+console.log(`This is \n\
+for multiple \n\
+lines`)
+
+console.log(`This
+is 
+for multiple
+lines`)
+
+
+// ---------------------Taking decison: if / else statements-----------------
+
+const kelsAge = 5;
+
+if (kelsAge >= 18) {
+  console.log(`Kels is eligible to drink alchohol cos his age is ${kelsAge}`)
+}
+// else statement excutes when the if statement returns false
+
+else {
+  const yearsLeft = 18 - kelsAge;
+  console.log(`Kels is not eligible to drink achohol . wait another ${yearsLeft}`)
+}
+
+
+
+let dayOfTheWeek = 'Monday';
+
+if (dayOfTheWeek == 'Monday') {
+  console.log('SIT AT HOME');
+}
+
+else {
+  console.log('Write some code');
+}
+
+
+
+const marksBmi = 28.3;
+const johnsBmi = 23.9;
+
+if (marksBmi > johnsBmi) {
+  console.log(`${marksBmi} is higher than ${johnsBmi} `);
+}
+
+else {
+  console.log(`${johnsBmi} is higher than ${marksBmi}`);
+}
+
+// -----Time conversion and Coercion---
+// -----Time 
