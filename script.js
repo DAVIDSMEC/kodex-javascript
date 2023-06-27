@@ -341,4 +341,26 @@ else {
 }
 
 // -----Time conversion and Coercion---
-// -----Time 
+// -----Time  conversion is the process of converting a value from one type to another
+
+const inputYear = '1991';
+console.log(Number(inputYear), inputYear);
+console.log(Number(inputYear) + 10);
+
+console.log(Number('Donald'));
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+// -----Time coercion
+// time coercion is when Javascript coerces or changes a data type by itself
+
+const sum = 35 + 'hello';
+console.log(sum);
+
+console.log('23' - '10' - 3);
+console.log('24' / '2');
+
+let n = '1' + 1;
+n = n - 1;
+console.log(n);
