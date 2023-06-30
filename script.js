@@ -364,3 +364,34 @@ console.log('24' / '2');
 let n = '1' + 1;
 n = n - 1;
 console.log(n);
+
+// *************** Truthy and Falsy  ***********
+
+// we have 5 Falsy Values 0, "", undefined, null, NaN
+console.log(Boolean(0));
+console.log(Boolean(""));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+
+const money = 100;
+
+if(money) {
+  console.log('Go on a shopping ')
+}
+
+else {
+  console.log('Dont spend the money');
+}
+
+
+ let product = 0;
+
+ if(product){
+  console.log('stay at home')
+ }
+
+ else {
+  console.log('go on a shopping spree')
+ }
+
