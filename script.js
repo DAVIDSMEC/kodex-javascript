@@ -487,7 +487,50 @@ else if (manchester === barcelona && manchester >= 100 && barcelona >= 100 ) {
 }
 else {
   console.log("No one wins the trophy");
+
 }
+//  ==========the switch statement============
+
+const day = "tuesday";
+
+//  switch(day){
+//   case 'monday':
+//    console.log('sit at home');
+//    break;
+//   case 'tuesday':
+//    console.log('Go for javascript class')
+//    break;
+//   case 'Wednesday':
+//    console.log('Go to the gym')
+//    break;
+//   case 'thursday': 
+//   case 'friday': 
+//     console.log('bake some cake')
+//    break;
+//   case "saturday":
+//   case "sunday":
+//    console.log('write some code')
+//  }
+
+// using if statement to represent the if statement
+
+if(day === 'tuesday'){
+  console.log('sit at home');
+}else if(day === 'tuesday'){
+  console.log('Go for javascript class')
+} else if (day === 'wednesday') {
+  console.log('Go to the gym')
+} else if (day === 'thursday') {
+  console.log('bake some cake')
+} else if (day === 'friday') {
+  console.log('write some code')
+} else if (day === 'saturday') {
+  console.log('play football')
+}
+ else if (day === 'sunday') {
+  console.log('play')
+}
+ 
 
 
 
