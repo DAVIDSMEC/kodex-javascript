@@ -376,7 +376,7 @@ console.log(Boolean(NaN));
 
 const money = 100;
 
-if(money) {
+if (money) {
   console.log('Go on a shopping ')
 }
 
@@ -385,13 +385,111 @@ else {
 }
 
 
- let product = 0;
+let product = 0;
 
- if(product){
+if (product) {
   console.log('stay at home')
- }
+}
 
- else {
+else {
   console.log('go on a shopping spree')
- }
+}
+
+// ----------------logical operators---------------
+// logical operators are used to determine the logic between variables and values 
+// && is the AND Operator
+// || is the OR Operator
+// ! is the NOT Operator
+
+const hasDriversLicense = true;
+const hasGoodVision = false;
+const isTired = false;
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+if (hasDriversLicense && hasGoodVision) {
+  console.log('Nonso is eligible to drive');
+}
+else {
+  console.log('someone else should drive');
+}
+
+if (hasDriversLicense || hasGoodVision) {
+  console.log('Nonso is eligible to drive');
+}
+
+else {
+  console.log('someone else should drive')
+}
+
+if (!hasDriversLicense || hasGoodVision) {
+  console.log('Nonso is eligible to drive');
+}
+
+else {
+  console.log('someone else should drive')
+}
+if (hasDriversLicense && hasGoodVision || isTired) {
+  console.log('Nonso is eligible to drive')
+}
+else {
+  console.log('someone else should drive');
+}
+
+
+// step 1
+// const manchester = (96 + 108 + 89) / 3;
+// const barcelona = (88 + 91 + 110) / 3;
+// console.log(manchester, barcelona);
+
+// // step 2
+// if(manchester > barcelona){
+//   console.log('manchester is the winner');
+// }else if(barcelona > manchester){
+//   console.log('barcelona wins')
+// }else if(manchester === barcelona){
+//   console.log('Its a draw, both team wins');
+// }
+
+// bonus 1
+// let = manchester = (97 + 112 + 101) / 3;
+// let = barcelona = (109 + 95 + 123) / 3;
+// console.log(manchester, barcelona);
+
+
+// if(manchester > barcelona && manchester >= 100){
+//   console.log('machester wins the trophy')
+// } 
+// else if(barcelona > manchester && barcelona >= 100){
+//   console.log('Barcelona wins the trophy')
+// }
+// else if(manchester === barcelona && manchester >= 100 && barcelona >= 100){
+//   console.log('both wins the trophy')
+// }
+
+
+// bonus 2
+let = manchester = (97 + 112 + 81) / 3;
+let = barcelona = (109 + 95 + 86) / 3;
+console.log(manchester, barcelona);
+
+
+if (manchester > barcelona && manchester >= 100) {
+  console.log('machester wins the trophy')
+}
+else if (barcelona > manchester && barcelona >= 100) {
+  console.log('Barcelona wins the trophy')
+}
+else if (manchester === barcelona && manchester >= 100 && barcelona >= 100 ) {
+  console.log('both wins the trophy')
+}
+else {
+  console.log("No one wins the trophy");
+}
+
+
+
+
 
