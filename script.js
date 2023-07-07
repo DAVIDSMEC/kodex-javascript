@@ -547,6 +547,122 @@ const bill = 275;
 const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 console.log(`the bills ${bill}, the tips was ${tip}, and the total value is ${bill + tip}`)
 
+// --------------------------Functions---------------------
+
+function sayHiToDonald(){
+console.log('My name is David , Say Hi');
+}
+//  you call or invoke the function
+sayHiToDonald()
+
+function getFruitName(item1, item2) {
+  const juice =`Fruit salad is made with ${item1} and ${item2}`
+  return juice;
+}
+
+getFruitName()
+const fruitSalad = getFruitName('Cabage', 'carrot');
+console.log(fruitSalad)
+
+// function declaration
+ function calculateAge(birthYear){
+  return 2023 - birthYear;
+ }
+
+console.log(calculateAge(1998))
+
+// function expression 
+// let a = b + c
+const calculateAge1 = function(birthYear){
+  return 2023 - birthYear;
+}
+
+console.log(calculateAge1(1989));
+
+// ==================ARROW FUNCTION ===============
+
+ const calculateAge2 = birthYear => 2023 - birthYear;
+ console.log(calculateAge2(1717));
+//  no return keyword if the parameter is one
+
+// use return keyword if the parameter is more than one
+ const yearsUntillRetirement = (birthYear, firstName) => {
+  const age = 2023 - birthYear;
+  const retirement = 60 - age;
+  return `${firstName} retires in ${retirement} years`
+ }
+
+ console.log(yearsUntillRetirement('1992', 'Ugo'))
+
+//  ==================FUNCTIONS CALLING OTHER FUNCTIONS=================
+
+function cutFruitPieces(fruitNumber){
+  return fruitNumber * 4;
+}
+
+function fruitProcessor(item1, item2){
+  const item1Pieces = cutFruitPieces(item1);
+  const item2Pieces = cutFruitPieces(item2);
+
+  const juice = `Juice is made with ${item1Pieces} piceces of oranges and ${item2Pieces} pieces of Banana`;
+  return juice;
+}
+
+console.log(fruitProcessor(3, 2));
+
+// ===========function review================
+// const yearsUntillRetirement = (birthYear, firstName) => {
+//   const age = 2023 - birthYear;
+//   const retirement = 60 - age;
+//   return `${firstName} retires in ${retirement} years`
+// }
+
+// console.log(yearsUntillRetirement('1992', 'Ugo'))
 
 
+
+
+
+// const calcAverage = (team1, team2) => {
+//   const avgmanchester = (44 + 23 + 71) / 3;
+//   const avgbarcelona = (65 + 54 + 49) / 3;
+// }
+// console.log((manchester, barcelona));
+
+
+// const checkWinner = (avgmanchester, avgbarcelona) => {
+//   if(avgmanchester  >= avgbarcelona * 2){
+//     console.log(`manchester is the winner`)
+//   }
+//   else if(avgbarcelona >= avgmanchester * 2){
+//     console.log(`barcelona is the winner with average score of ${avgbarcelona}`)
+//   }
+//   else {
+//     console.log('nobody wins')
+//   }
+    
+// }
+// checkWinner(avgmanchester, avgbarcelona);
+
+
+const calAvg = (a, b, c) => (a + b + c) /3; 
+const avgmanchester = calAvg(44, 23, 71);
+const avgbarcelona = calAvg(65, 54,  49);
+
+console.log(avgmanchester);
+
+ 
+
+const checkWinner = (avgmanchester, avgbarcelona) => {
+  if(avgmanchester  >= avgbarcelona * 2){
+    console.log(`manchester is the winner`)
+  }
+  else if(avgbarcelona >= avgmanchester * 2){
+    console.log(`barcelona is the winner with average score of ${avgbarcelona}`)
+  }
+  else {
+    console.log('nobody wins')
+  }
+}
+checkWinner(avgmanchester, avgbarcelona);
 
