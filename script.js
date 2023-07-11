@@ -482,7 +482,7 @@ if (manchester > barcelona && manchester >= 100) {
 else if (barcelona > manchester && barcelona >= 100) {
   console.log('Barcelona wins the trophy')
 }
-else if (manchester === barcelona && manchester >= 100 && barcelona >= 100 ) {
+else if (manchester === barcelona && manchester >= 100 && barcelona >= 100) {
   console.log('both wins the trophy')
 }
 else {
@@ -514,9 +514,9 @@ const day = "tuesday";
 
 // using if statement to represent the if statement
 
-if(day === 'tuesday'){
+if (day === 'tuesday') {
   console.log('sit at home');
-}else if(day === 'tuesday'){
+} else if (day === 'tuesday') {
   console.log('Go for javascript class')
 } else if (day === 'wednesday') {
   console.log('Go to the gym')
@@ -527,14 +527,14 @@ if(day === 'tuesday'){
 } else if (day === 'saturday') {
   console.log('play football')
 }
- else if (day === 'sunday') {
+else if (day === 'sunday') {
   console.log('play')
 }
- 
+
 
 // -------------------------The Ternary Operator------------------
- const age = 23;
- age >= 18 ? console.log('I love alchohol') : console.log('I like caprisun');
+const age = 23;
+age >= 18 ? console.log('I love alchohol') : console.log('I like caprisun');
 
 //  OR
 // if (age >= 18) {
@@ -545,18 +545,19 @@ if(day === 'tuesday'){
 // }
 const bill = 275;
 const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
 console.log(`the bills ${bill}, the tips was ${tip}, and the total value is ${bill + tip}`)
 
 // --------------------------Functions---------------------
 
-function sayHiToDonald(){
-console.log('My name is David , Say Hi');
+function sayHiToDonald() {
+  console.log('My name is David , Say Hi');
 }
 //  you call or invoke the function
 sayHiToDonald()
 
 function getFruitName(item1, item2) {
-  const juice =`Fruit salad is made with ${item1} and ${item2}`
+  const juice = `Fruit salad is made with ${item1} and ${item2}`
   return juice;
 }
 
@@ -565,15 +566,15 @@ const fruitSalad = getFruitName('Cabage', 'carrot');
 console.log(fruitSalad)
 
 // function declaration
- function calculateAge(birthYear){
+function calculateAge(birthYear) {
   return 2023 - birthYear;
- }
+}
 
 console.log(calculateAge(1998))
 
 // function expression 
 // let a = b + c
-const calculateAge1 = function(birthYear){
+const calculateAge1 = function (birthYear) {
   return 2023 - birthYear;
 }
 
@@ -581,26 +582,26 @@ console.log(calculateAge1(1989));
 
 // ==================ARROW FUNCTION ===============
 
- const calculateAge2 = birthYear => 2023 - birthYear;
- console.log(calculateAge2(1717));
+const calculateAge2 = birthYear => 2023 - birthYear;
+console.log(calculateAge2(1717));
 //  no return keyword if the parameter is one
 
 // use return keyword if the parameter is more than one
- const yearsUntillRetirement = (birthYear, firstName) => {
+const yearsUntillRetirement = (birthYear, firstName) => {
   const age = 2023 - birthYear;
   const retirement = 60 - age;
   return `${firstName} retires in ${retirement} years`
- }
+}
 
- console.log(yearsUntillRetirement('1992', 'Ugo'))
+console.log(yearsUntillRetirement('1992', 'Ugo'))
 
 //  ==================FUNCTIONS CALLING OTHER FUNCTIONS=================
 
-function cutFruitPieces(fruitNumber){
+function cutFruitPieces(fruitNumber) {
   return fruitNumber * 4;
 }
 
-function fruitProcessor(item1, item2){
+function fruitProcessor(item1, item2) {
   const item1Pieces = cutFruitPieces(item1);
   const item2Pieces = cutFruitPieces(item2);
 
@@ -640,24 +641,24 @@ console.log(fruitProcessor(3, 2));
 //   else {
 //     console.log('nobody wins')
 //   }
-    
+
 // }
 // checkWinner(avgmanchester, avgbarcelona);
 
 
-const calAvg = (a, b, c) => (a + b + c) /3; 
+const calAvg = (a, b, c) => (a + b + c) / 3;
 const avgmanchester = calAvg(44, 23, 71);
-const avgbarcelona = calAvg(65, 54,  49);
+const avgbarcelona = calAvg(65, 54, 49);
 
 console.log(avgmanchester);
 
- 
+
 
 const checkWinner = (avgmanchester, avgbarcelona) => {
-  if(avgmanchester  >= avgbarcelona * 2){
+  if (avgmanchester >= avgbarcelona * 2) {
     console.log(`manchester is the winner`)
   }
-  else if(avgbarcelona >= avgmanchester * 2){
+  else if (avgbarcelona >= avgmanchester * 2) {
     console.log(`barcelona is the winner with average score of ${avgbarcelona}`)
   }
   else {
@@ -665,4 +666,76 @@ const checkWinner = (avgmanchester, avgbarcelona) => {
   }
 }
 checkWinner(avgmanchester, avgbarcelona);
+
+// =======================INTRODUCTION TO ARRAYS==========================
+
+let student1, student2, student3;
+student1 = "Donald";
+student2 = "Somto";
+student3 = "Michael";
+
+// Method 1
+const friends = ['Ugo', 'prisca', 'David', 'Divine'];
+console.log(friends);
+console.log(friends[1]);
+console.log(friends.length);
+
+friends[1] = 'Donald';
+console.log(friends);
+
+// method 2
+// const people = new Array ('Joseph', 'donald', 23, 81);
+// console.log(people);
+
+const findAge = function (birthYear) {
+  return 2023 - birthYear;
+}
+
+const years = [1990, 1965, 1966, 1954];
+
+const age1 = findAge(years[0]);
+const age2 = findAge(years[1]);
+const age3 = findAge(years[years.length - 1]);
+
+console.log(age1, age2, age3);
+
+
+// ====================Array Mehods========================
+
+// Add Elements = The push method Appends
+
+const newFriends = ['Ugo', 'Prisca', 'Henry', 'David'];
+
+// Add Elements = The push method appends new elements to the end of an array, and a new length of arrray
+
+const newLength = newFriends.push('Donald');
+console.log(newFriends);
+console.log(newLength);
+
+
+// Removing Elements===The pop method removes the last
+
+// =========coding challenge===========
+// const yearsUntillRetirement = (birthYear, firstName) => {
+
+
+
+const calcTip = function (bill) {
+  const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+  return tip;
+}
+console.log(calcTip(100));
+
+// task 2
+
+const bills = [125, 55, 44];
+
+// task 3
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+// task 4
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2] ];
+
+console.log(bills, tips, totals);
+
 
