@@ -734,8 +734,113 @@ const bills = [125, 55, 44];
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 
 // task 4
-const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2] ];
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log(bills, tips, totals);
 
 
+// ========================== INTRODUCTION TO OBJECT===============================
+
+const donaldArray = [
+  'Donald',
+  'Wilfred',
+  2023 - 1999,
+  'Developer',
+  ['kels', 'somto', 'olisa']
+];
+
+// const donaldObject = {
+//   firstName: 'Donald',
+//   lastName: 'Wilfred',
+//   age: '2023 - 1999',
+//   job: 'Developer',
+//   friends: ['kels', 'somto', 'ugo']
+// }
+
+// console.log(donaldObject);
+
+// Dot vs Bracket
+
+// dot notation
+// console.log(donaldObject.job);
+
+// bracket notation
+// console.log(donaldObject['friends']);
+
+// const nameKey = "Name";
+// console.log(donaldObject['first' + nameKey]);
+// console.log(donaldObject['last' + nameKey]);
+
+// const interestedIn = prompt('What do you want to know about me? Choose between firstName, lastName, job, and friends');
+
+// if (donaldObject[interestedIn]) {
+//   console.log(donaldObject[interestedIn]);
+// }
+// else {
+//   console.log('Wrong Request')
+// };
+
+// donaldObject.location = "Italy";
+// donaldObject.['gitHub'] = "hdhdhdjj";
+
+
+// Donald has 3 friends and his best friend is ugo
+// console.log(`${donaldObject.firstName} has ${donaldObject.friends.length} friends and his best friend is ${donaldObject.friends[2]}`);
+
+//  ==============================Object Methods===============================
+
+const students = {
+  firstName: 'Donald',
+  lastName: 'Nwaokoro',
+  birthYear: '1991',
+  job: 'Developer',
+  friends: ['Henry', 'pomto', 'ezeugo'],
+  hasDriversLicense: true,
+  calculateAge: function () {
+    this.age = 2023 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    // Donald is a 32 year old Developer, and he has a/no drivers lincence
+    return `${this.firstName} is a ${this.calculateAge()} year old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} drivers licence`;
+  },
+}
+console.log(students);
+console.log(students.calculateAge());
+console.log(students.age);
+console.log(students.getSummary());
+
+
+// coding challenge
+const mark = {
+  fullName: 'Mark Miller',
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  }
+};
+
+const John = {
+  fullName: 'John Smith',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  }
+
+};
+
+
+mark.calcBMI();
+John.calcBMI();
+console.log(mark.bmi, John.bmi);
+
+if(mark.bmi > John.bmi) {
+  console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${John.fullName}'s  BMI (${John.bmi})`)
+}
+else if (John.bmi > mark.bmi){
+  console.log(`${John.fullName}'s BMI ${John.bmi} is higher than ${mark.bmi}`)
+}
